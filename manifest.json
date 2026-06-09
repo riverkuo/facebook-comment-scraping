@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "fb-graphql-debugger",
+    "version": "1.0.0",
+    "permissions": [
+        "debugger",
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://*.facebook.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
