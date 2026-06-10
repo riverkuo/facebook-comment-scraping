@@ -112,7 +112,7 @@ chrome.debugger.onEvent.addListener((source, method, params) => {
           } else if (currentPrefix === 'commentDepth1') {
             processCommentDepth1Data(jsonRes);
           } else if (currentPrefix === 'commentDepth2') {
-            processCommentDepth1Data(jsonRes);
+            processCommentDepth2Data(jsonRes);
           } else if (currentPrefix === 'commentList') {
             processPostCommentSortingComments(jsonRes);
           } else if (currentPrefix === 'moreComments') {
@@ -166,6 +166,7 @@ function processCommentDepth1Data(data) {
         data[0].data.node.replies_connection.edges
     );
     // data[0].data.node.replies_connection.edges[0].node.feedback.url -> comment_id & reply_comment_id
+    // data[0].data.node.replies_connection.edges[0].node.feedback.replies_connections.edges[0].node
     console.log(
         '======= End of Comment Depth 1 ======='
     );
